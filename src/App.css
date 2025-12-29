@@ -1,0 +1,100 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.square{
+  height: 100px;
+  width: 100px;
+  background-color: aliceblue;
+  color:black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  border-style: solid;  
+  border-color: #000;
+  border-width: 5px;
+}
+
+.Board{
+  border-color: #000;
+  border-width: 5px;
+}
+.Board-row {
+  display: flex;
+  flex-direction: row;
+}
+.card {
+  padding: 2em;
+}
+
+.win-counter{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.counter-display{
+  padding: 10px;
+  margin-left: 10px;
+}
+.scoreboard-container {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.scoreboard-title {
+  color: #888;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.score-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.player-name {
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.x-team .player-name { color: #3b82f6; } /* Blue */
+.o-team .player-name { color: #ef4444; } /* Red */
+
+.score-display {
+  background: #000;
+  color: #fff;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2.5rem;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.score-divider {
+  font-size: 2rem;
+  color: #555;
+  font-weight: bold;
+}
