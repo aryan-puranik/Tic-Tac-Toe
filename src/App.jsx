@@ -1,31 +1,23 @@
-import { useState, useEffect } from 'react' 
+import { useState } from 'react' 
 import './App.css'
-import Header from './components/header'
-import Footer from './components/Footer'
 import Board from './components/Board'
-import IpAddress from './components/IpAddress'
-import Counter from './components/Counter'
+import PlayerLogin from './components/login'
 
 function App() {
-  const greeting = import.meta.env.VITE_GREETINGS
-  const [count, setCount] = useState(0)
-  
-  // 2. Define the state for the IP address
-  
+  const [players, setPlayers] = useState(null);
 
+  const handleStart = (p1, p2) => {
+    setPlayers({ x: p1, o: p2 });
+  };
   return (
-    <>
-      
-      
-      <div className="card">
-        <Header/>
-        <h2>{greeting}</h2>
-        <IpAddress/>
-        <Board />
-        <Footer/>
-      </div>
-  
-      
+    <> 
+      <div>
+      {!players ? (
+        <PlayerLogin onStartGame={handleStart} />
+      ) : (
+        <Board players={players} />
+      )}
+    </div> 
     </>
   )
 }
